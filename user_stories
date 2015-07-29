@@ -1,0 +1,48 @@
+As a player
+So that I can prepare for the game
+I would like to place a ship in a board location
+- done
+
+As a player
+So that I can play a more interesting game
+I would like to have a range of ship sizes to choose from
+- done
+
+As a player
+So that I can create a layout of ships to fox my opponent
+I would like to be able to choose the directions my ships face in
+- done
+
+As a player
+So that I can have a coherent game
+I would like ships to be constrained to be on the board
+- done
+
+As a player
+So that I can have a coherent game
+I would like ships to be constrained not to overlap
+- done
+
+As a player
+So that I can win the game
+I would like to be able to fire at my opponents board
+- done
+
+As a player
+So that I can refine my strategy
+I would like to know when I have sunk an opponent's ship
+- done
+
+As a player
+So that I know when to finish playing
+I would like to know when I have won or lost
+- done
+
+As a player
+So that I can consider my next shot
+I would like an overview of my hits and misses so far
+- done
+
+As a player
+So that I can play against a human opponent
+I would like to play a two-player game
