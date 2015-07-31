@@ -1,4 +1,4 @@
-require_relative '../lib/ship'
+require 'ship'
 
 describe Ship  do
 

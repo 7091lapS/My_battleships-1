@@ -1,4 +1,5 @@
 require_relative 'ship'
+require 'terminal-table'
 
 class Board
 
@@ -61,6 +62,17 @@ class Board
 
 	def lost?
 		@ship_positions&history_hash[:hits] == @ship_positions
+	end
+
+	def draw_the_board name
+		title = "#{name}: your manoeuvres so far... ( O = miss, X = hit)"
+		headings = (0...DEFAULT_BOUNDARY).to_a.push("\\")
+		rows = Array.new(DEFAULT_BOUNDARY) { [ ".", ".", ".", ".", ".", ".", ".", ".", ".", "." ] }
+		(0...DEFAULT_BOUNDARY).each { |i| rows[i].push(i) }
+		history_hash[:hits].each {|element| rows[element[0]][element[1]] = "X"}
+		history_hash[:misses].each {|element| rows[element[0]][element[1]] = "O"}
+		table = Terminal::Table.new :title => title, :headings => headings, :rows => rows
+		puts table
 	end
 
 end

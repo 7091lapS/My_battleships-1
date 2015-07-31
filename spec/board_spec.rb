@@ -116,4 +116,14 @@ end
 		end
 	end
 
+	# describe '#draw_the_board' do
+	# 	hash = { hits: [ [0,0], [1,0] ], misses: [ [0,1], [2,1] ] }
+	# 	let(:subject) {described_class.new(3)}
+	# 	allow(subject).to receive(:boundary) {3}
+	# 	allow(subject).to receive(:history_hash) {hash}
+	# 	# expect(subject.draw_the_board).to eq([  [".",".","."],
+	#  # 																					["O",".","O"],
+	# 	# 																				["X","X","."]  ])
+	# end
+
 end

@@ -1,10 +1,10 @@
-require_relative '../lib/player'
+require 'player'
 
 describe Player do
   let(:board) { double (:board) }
   let(:ship) { double(:ship, size: 1)}
   let(:ship_class){double :ship_class, :new => ship}
-  let(:subject) {described_class.new(board, ship_class)}
+  let(:subject) {described_class.new(board, ship_class, "Player1")}
 
   describe '#get_shot' do
 
@@ -29,5 +29,13 @@ describe Player do
           expect(board).to receive(:place).with(ship, [0,0], :horizontal)
           subject.place_ships([[[0,0], :horizontal]])
       end
+  end
+
+  describe '#lost?' do
+    it 'calls the player\'s board#lost? method' do
+      expect(board).to receive(:lost?)
+      subject.lost?
+    end
+
   end
 end
